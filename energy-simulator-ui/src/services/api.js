@@ -1,14 +1,8 @@
-import React from 'react';
-import './App.css';
-import InputForm from './components/InputForm';  // Import the form
+import axios from 'axios';
 
-function App() {
-    return (
-        <div className="App">
-            <h1>Energy Transition Simulator</h1>
-            <InputForm />  {/* Render the form */}
-        </div>
-    );
-}
+const API_URL = 'http://localhost:5000';  // Update this if your Flask backend is hosted elsewhere
 
-export default App;
+// Function to send simulation data to the backend
+export const runSimulation = (data) => {
+    return axios.post(`${API_URL}/simulate`, data);
+};
