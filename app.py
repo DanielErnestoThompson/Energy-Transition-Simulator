@@ -2,6 +2,12 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+# Define a default route for the root '/'
+@app.route('/')
+def home():
+    return "Welcome to the Energy Transition Simulator API!"
+
+# Define the /simulate route to handle POST requests
 @app.route('/simulate', methods=['POST'])
 def simulate():
     # Get the JSON data from the request

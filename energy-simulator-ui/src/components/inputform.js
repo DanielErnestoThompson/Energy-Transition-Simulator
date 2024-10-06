@@ -9,22 +9,21 @@ const InputForm = () => {
     // Handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
-
+    
         const simulationData = {
             carbon_price: carbonPrice,
             subsidies: subsidies
         };
-
-        // Call the backend API via Axios
-        runSimulation(simulationData)
+    
+        runSimulation(simulationData)  // Ensure this calls the POST request
             .then(response => {
-                console.log('Simulation results:', response.data);
-                setResult(response.data);  // Update the result state
+                setResult(response.data);  // Display the result
             })
             .catch(error => {
                 console.error('Error running simulation:', error);
             });
     };
+    
 
     return (
         <div>
