@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import InputForm from '../components/inputForm';  // Import from components folder
+import InputForm from 'C:\\Users\\offic\\OneDrive\\Desktop\\Energy Transition Simulator\\Energy-Transition-Simulator\\energy-simulator-ui\\src\\components\\inputform.js';  // Import from components folder
 
 function App() {
     return (
